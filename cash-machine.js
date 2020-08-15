@@ -1,7 +1,7 @@
 
 class biglietto
 {
-  constructir(v, c)
+  constructor(v, c)
   {
     this.valore = v;
     this.quantità = c;
@@ -46,3 +46,18 @@ function consegnareDenaro()
        }
     }
    }
+    
+    var cassa = [];
+    var consegnato = [];
+    cassa.push( new Biglietti(100,5) );
+    cassa.push( new Biglietti(50,10) );
+    cassa.push( new Biglietti(20,5) );
+    cassa.push( new Biglietti(10,10) );
+    cassa.push( new Biglietti(5,5) );
+    var denaro = 0;
+    var div = 0;
+    var fogli = 0;
+
+    var risultato = document.getElementById("risultato");
+    var b = document.getElementById("estrarre");
+    b.addEventListener("click", consegnareDenaro);
